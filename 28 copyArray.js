@@ -1,4 +1,4 @@
-const numbers = [1, 2, 3, 4, 5, 6];
+const numbers = [1, 2, [10], 3, 4, 5, 6];
 
 /*  copy array by reference  */
 // const anotherNumbers = numbers;
@@ -11,6 +11,9 @@ const numbers = [1, 2, 3, 4, 5, 6];
 // const anotherNumbers = numbers.slice();
 
 // solution 3 (deep copy)
-const anotherNumbers = JSON.parse(JSON.stringify(numbers));
+// const anotherNumbers = JSON.parse(JSON.stringify(numbers));
+
+// solution 4 (deep copy)
+const anotherNumbers = structuredClone(numbers);
 
 console.log(anotherNumbers);
